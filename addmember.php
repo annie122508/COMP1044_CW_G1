@@ -23,11 +23,15 @@ if(isset($_POST['submit'])){
 	$result=mysqli_query($con,$sql);
 
 	if ($result) {
-		echo "New record created successfully";
+		echo "<script type='text/javascript'>
+    	alert('$message');
+   		window.location.href='addmember.php'; </script>";
 		} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+		echo "<script type='text/javascript'>
+    	alert('$message2');
+   		window.location.href='addmember.php'; </script> " . $sql . "<br>" . $conn->error;
 		}
-		$con->close();
+		$conn->close();
 }
 ?>
 
