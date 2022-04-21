@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
 	$Address = $_POST['address'];
 	$Contact = $_POST['contact'];
 	$Year_level = $_POST['year_level'];
-    $Status = $_POST['status'];
+    	$Status = $_POST['status'];
 
 	//insert data
 	
