@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Book</title>
+<link rel="stylesheet"href="add.css">
+</head>
+<body>
+<div class="wrapper">
+		<div class="multi_color_border"></div>
+		<div class="top_nav">
+			<div class="left">
+				<div class="logo"><p>Online Library<br>Management System</p></div>
+			</div>	
+		
+			<div class="right">
+				<ul>
+					<li><a href="#">SIGN UP</a></li>
+					<li><a href="#">LOGIN</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="bottom_nav">
+			<ul>
+				<li><a href="#">DASHBOARD</a></li>
+				<li><a href="#">CATEGORIES</a></li>
+				<li><a href="#">AUTHORS</a></li>
+				<li><a href="#">BOOKS</a></li>
+				<li><a href="#">ISSUE BOOKS</a></li>
+				<li><a href="#">CHANGE PASSWORD</a></li>
+			</ul>
+		</div>
+	</div>
+<div class="add-book">
+	<form action="InsertBook.php" method="post">
+	<input type="text" class="input-field" placeholder="Book ID">
+	<input type="text" class="input-field" placeholder="Book Name">
+	<input type="text" class="input-field" placeholder="Category ID">
+	<input type="text" class="input-field" placeholder="Author">
+	<input type="text" class="input-field" placeholder="Book copies">
+	<input type="text" class="input-field" placeholder="Book Pub">
+	<input type="text" class="input-field" placeholder="Publisher">
+	<input type="text" class="input-field" placeholder="ISBN">
+	<input type="text" class="input-field" placeholder="Copyright">
+	<input type="text" class="input-field" placeholder="date received">
+	<input type="text" class="input-field" placeholder="date added">
+	<input type="text" class="input-field" placeholder="status">
+	<button type="button" class="btn">Submit</button>
+
+	</form>
+</div>
+</body>
+</html>
