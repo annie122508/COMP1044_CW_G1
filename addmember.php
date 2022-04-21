@@ -21,7 +21,9 @@ if(isset($_POST['submit'])){
 			VALUES ('$Firstname','$Lastname','$type_id','$Gender','$Address','$Contact','$Year_level', '$Status')";
     
 	$result=mysqli_query($con,$sql);
-
+	$message="Successfully added the member";
+	$message2="Unable to add the data into the database";
+	
 	if ($result) {
 		echo "<script type='text/javascript'>
     	alert('$message');
