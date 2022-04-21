@@ -24,13 +24,19 @@ if(isset($_POST['submit'])){
 			VALUES ('$BookName','$CategoryID','$Author','$Bookcopies','$BookPub','$Publisher','$ISBN','$Copyright','$DateReceived','$DateAdded','$status')";
     
 	$result=mysqli_query($con,$sql);
-
+	$message="Successfully added the book";
+	$message2="Unable to add the data into the database";
+	
 	if ($result) {
-		echo "New record created successfully";
+		echo "<script type='text/javascript'>
+    	alert('$message');
+   		window.location.href='addmember.php'; </script>";
 		} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+		echo "<script type='text/javascript'>
+    	alert('$message2');
+   		window.location.href='addmember.php'; </script> " . $sql . "<br>" . $conn->error;
 		}
-		$con->close();
+		$conn->close();
 }
 ?>
 
@@ -79,7 +85,7 @@ if(isset($_POST['submit'])){
 	<input type="text" class="input-field" placeholder="Copyright" name="copyright_year">
 	<input type="text" class="input-field" placeholder="date received" name="date_receive">
 	<input type="text" class="input-field" placeholder="date added "name="date_added">
-	<input class="input-field" type="text" placeholder="status" name="status">
+	<input type="text" class="input-field" placeholder="status" name="status">
 	<button type="submit" id="button" name="submit">submit</button>
 
 	</form>
