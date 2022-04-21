@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
 	//insert data
 	
-	$sql = "INSERT INTO book (book_title,category_id,author,book_copies,book_pub,publisher,isbn,copyright_year,date_receive,date_added,`status`)
+	$sql = "INSERT INTO book (book_title,category_id,author,book_copies,book_pub,publisher_name,isbn,copyright_year,date_receive,date_added,`status`)
 			VALUES ('$BookName','$CategoryID','$Author','$Bookcopies','$BookPub','$Publisher','$ISBN','$Copyright','$DateReceived','$DateAdded','$status')";
     
 	$result=mysqli_query($con,$sql);
