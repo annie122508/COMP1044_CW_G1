@@ -208,14 +208,14 @@ form{
 	
 }
 .btn{
-	border-radiu:20px;
+	border-radius:20px;
 	color:#fff;
 	margin-top:18px;
 	padding:10px;
 	background-color:#47c35a;
 	font-size:12px;
 	border:none;
-	cursor:pointer:
+	cursor:pointer;
 }
 
 #button {
