@@ -13,11 +13,12 @@ if(isset($_POST['submit'])){
 	$Address = $_POST['address'];
 	$Contact = $_POST['contact'];
 	$Year_level = $_POST['year_level'];
+    $Status = $_POST['status'];
 
 	//insert data
 	
-	$sql = "INSERT INTO member (firstname, lastname , `type_id`, gender, `address`, contact, year_level)
-			VALUES ('$Firstname','$Lastname','$type_id','$Gender','$Address','$Contact','$Year_level')";
+	$sql = "INSERT INTO member (firstname, lastname , `type_id`, gender, `address`, contact, year_level, `status`)
+			VALUES ('$Firstname','$Lastname','$type_id','$Gender','$Address','$Contact','$Year_level', '$Status')";
     
 	$result=mysqli_query($con,$sql);
 
@@ -90,6 +91,7 @@ if(isset($_POST['submit'])){
 	<input type="text" id="Address" name="address" placeholder="Address">
 	<input type="text" id="Contact" name="contact" placeholder="Contact">
     <input type="text" id="Year_level" name="year_level" placeholder="Year Level">
+    <input type="text" id="Status" name="status" placeholder="Status">
     <input onclick="return validationForm()" id="button" type="submit" name="submit" value="Submit"></button>
         </form>
 </div>
