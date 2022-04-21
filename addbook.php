@@ -20,23 +20,17 @@ if(isset($_POST['submit'])){
 
 	//insert data
 	
-	$sql = "INSERT INTO book (book_title,category_id,author,book_copies,book_pub,publisher_name,isbn,copyright_year,date_receive,date_added,`status`)
+	$sql = "INSERT INTO book (book_title,category_id,author,book_copies,book_pub,publisher,isbn,copyright_year,date_receive,date_added,`status`)
 			VALUES ('$BookName','$CategoryID','$Author','$Bookcopies','$BookPub','$Publisher','$ISBN','$Copyright','$DateReceived','$DateAdded','$status')";
     
 	$result=mysqli_query($con,$sql);
-	$message="Successfully added the book";
-	$message2="Unable to add the data into the database";
-	
+
 	if ($result) {
-		echo "<script type='text/javascript'>
-    	alert('$message');
-   		window.location.href='addmember.php'; </script>";
+		echo "New record created successfully";
 		} else {
-		echo "<script type='text/javascript'>
-    	alert('$message2');
-   		window.location.href='addmember.php'; </script> " . $sql . "<br>" . $conn->error;
+		echo "Error: " . $sql . "<br>" . $conn->error;
 		}
-		$conn->close();
+		$con->close();
 }
 ?>
 
@@ -85,7 +79,7 @@ if(isset($_POST['submit'])){
 	<input type="text" class="input-field" placeholder="Copyright" name="copyright_year">
 	<input type="text" class="input-field" placeholder="date received" name="date_receive">
 	<input type="text" class="input-field" placeholder="date added "name="date_added">
-	<input type="text" class="input-field" placeholder="status" name="status">
+	<input class="input-field" type="text" placeholder="status" name="status">
 	<button type="submit" id="button" name="submit">submit</button>
 
 	</form>
@@ -200,8 +194,11 @@ body{
 	
 }
 form{
+	position:absolute;
 	margin:30px;
 	width:200px;
+	top:-300px;
+	
 }
 .input-field{
 	width:450px;
@@ -213,7 +210,7 @@ form{
 	outline:none;
 	
 }
-.btn{
+#button{
 	border-radius:20px;
 	color:#fff;
 	margin-top:18px;
@@ -224,15 +221,6 @@ form{
 	cursor:pointer;
 }
 
-#button {
-		width:450px;
-		height:30px;
-		margin-top:23px;
-		padding-left:10px;
-		border:1px solid #777;
-		border-radius:14px;
-		outline:none;
-		cursor: pointer;
-	}
+
 </style>
 </html>
