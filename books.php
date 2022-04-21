@@ -65,6 +65,9 @@ include 'conn/connect_db.php';
 		  <input type="hidden" name="book_id" value="<?php echo $book_id; ?>"/>
 		  <input type="submit" name="deletedata" value="Delete" onclick="return checkDelete();"/>
  	</form>
+  <td><center><form name ="button2" action="updateBooks.php" method="post">
+ 		  <input type="hidden" name="book_id" value="<?php echo $book_id; ?>"/>
+	  	  <input type="submit" name="edit" value="Edit" onclick="return checkEdit();"/>
  </tr>
  <?php } ?>
  </table>
