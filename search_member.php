@@ -35,7 +35,7 @@ function filterTable($query)
 		border: 2px solid #4682B4;
 		padding: 5px 5px 5px 5px;
 		font-family: 'Rockwell';
-	
+	}
 	</style>
 	
 	</head>
