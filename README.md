@@ -5,8 +5,8 @@
 
 ### Implemented following major functionalities:
 - Sign Up
-- Login in
-- Login Out
+- Login
+- Logout
 - Add new item :
     - Adding a book to the database.
     - Adding a member to the database.
