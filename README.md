@@ -20,6 +20,12 @@
     - Delete a book from the database.
     - Delete a member from the database.
 
+## FrontEnd Platform
+HTML, CSS, JavaScript
+
+## BackEnd Platform
+PHP
+
 ### Languages used in the project:
 1. PHP
 2. CSS
