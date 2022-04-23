@@ -1,4 +1,4 @@
-# Online Library Management System (COMP1044_CW_G1)
+# Night Moon Library - Online Library Management System (COMP1044_CW_G1)
 
 > Library Management System is an automated system which used to manage a public library. Admins able to control and manage the system easily by utilizing the functionalities.
 
