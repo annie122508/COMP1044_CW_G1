@@ -100,7 +100,7 @@ include 'conn/connect_db.php';
  	</form>
 	 <td><center><form name ="button2" action="updatebook.php" method="POST">
 		  <input type="hidden" name="book_id" value="<?php echo $book_id; ?>"/>
-		  <input id="f1" type="submit" name="update" value="Edit" onclick="return deletecheck();"/>
+		  <input id="f1" type="submit" name="update" value="Edit"/>
  	</form>
  </tr>
  <?php } ?>
