@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Georgia', sans-serif;
+}
+
+.wrapper .multi_color_border{
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #626567 0%, #186A3B 25%,
+        #909497 25%, #239B56 50%, #239B56 50%, #909497 75%,
+        #186A3B 75%, #626567 100%)
+}
+
+.wrapper .top_nav{
+    width: 100%;
+    height: 65px;
+    background: #ccc;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .top_nav .left{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .top_nav .left .logo p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #494949;
+    margin-right: 25px;
+    font-family: 'Georgia', cursive;
+}
+
+.wrapper .top_nav .right ul{
+    display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+    margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+    background: #37a000;
+    margin-right: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li a{
+    display: flex;
+    padding: 8px 10px;
+    color: #666666;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+    color: #fff;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+    background: #494949
+}
+
+.wrapper .bottom_nav{
+    width: 100%;
+    background: #f9f9f9;
+    height: 45px;
+    padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+    width:100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .bottom_nav ul li a{
+    color: #494949;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.search h1{
+    margin: 50px 0px 20px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.search .search_box{
+    position: relative;
+    padding: 20px 50px;
+    text-align: center;
+}
+    
+.search .search_box .input{
+    width: 450px;
+    height: 55px;
+    border: 1px solid #4682B4;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: #000000;
+    font-size: 15px;
+    outline: none;
+}
+
+.search .search_box .click{
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 55px;
+    background: #7690da;
+    color: #000000;
+    border: 1px solid #4682B4;
+    font-size: 15px;
+    outline: none;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+table, tr, th, td{
+    border-collapse: collapse;
+    text-align: center;
+    border: 0.5px solid #4682B4;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-family: 'Rockwell';
+    margin: 25px 75px 25px 75px;
+    font-size: 14px;
+}
