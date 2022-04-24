@@ -103,19 +103,19 @@
 		<form method="POST">
 		<table>
 			<tr>
-				<td>Member ID:</td> 
+				<td bgcolor= #9bbad3>Member ID:</td> 
 				<td><b><?php print $member_id;?></b><input id="memberId" type="hidden" name="memberid" value='<?php print $member_id;?>'></td>
 			</tr>
 			<tr>
-				<td>First Name:</td> 
+				<td bgcolor= #9bbad3>First Name:</td> 
 				<td><input id="firstName" name="firstname" type="text" value='<?php print $firstname;?>'></td>
 			</tr>
 			<tr>
-				<td>Last Name:</td> 
+				<td bgcolor= #9bbad3>Last Name:</td> 
 				<td><input id="lastName" name="lastname" type="text" value='<?php print $lastname;?>'></td>
 			</tr>
 			<tr>
-				<td>Gender:</td>
+				<td bgcolor= #9bbad3>Gender:</td>
 					<td><select id="gender" name="gender">
 					<option value="<?php print $gender;?>"><?php print $gender;?></option>
 					<option value="Male">Male</option>
@@ -123,15 +123,15 @@
 					</td>
 			</tr>
 			<tr>
-				<td>Address:</td> 
+				<td bgcolor= #9bbad3>Address:</td> 
 				<td><input id="address" name="address" type="text" value='<?php print $address;?>'></td>
 			</tr>
 			<tr>
-				<td>Contact:</td> 
+				<td bgcolor= #9bbad3>Contact:</td> 
 				<td><input id="contact" name="contact" type="text" value='<?php print $contact;?>'></td>
 			</tr>
 			<tr>
-				<td>Borrower Type:</td>
+				<td bgcolor= #9bbad3>Borrower Type:</td>
 					<td><select id="borrowerType" name="borrowertype">
 					<option value="<?php print $borrowertypeid;?>"><?php print $borrowertype;?></option>
 					<?php
@@ -144,7 +144,7 @@
 					</td>
 			</tr>
 			<tr>
-				<td>Year level:</td>
+				<td bgcolor= #9bbad3>Year level:</td>
 					<td><select id="yearLevel" name="yearLevel">
 					<option value="<?php print $year_level;?>"><?php print $year_level;?></option>
 					<option value="Faculty">Faculty</option>
@@ -155,18 +155,15 @@
 					</td>
 			</tr>
 			<tr>
-				<td>Status:</td>
+				<td bgcolor= #9bbad3>Status:</td>
 					<td><select id="status" name="status">
 					<option value="<?php print $status;?>"><?php print $status;?></option>
 					<option value="Active">Active</option>
 					<option value="Banned">Banned</option>
 					</td>
 			</tr>
-			<tr>
-				<td><input name="edit" onclick="return validateForm()" type="submit" name="Update" value="Update"></td>
-				<td><button formaction="members.php">Back</button></td>
-			</tr>
-		</table>	
+			</table>	
+				<input id="f2" name="edit" onclick="return validateForm()" type="submit" name="Update" value="Update">
 		</form>
 	</body>
 </html>

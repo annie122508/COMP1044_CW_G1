@@ -72,20 +72,20 @@ function filterTable($query)
 					<input type="text" class="input" name="myInput" placeholder="Search by book title, author name, ISBN, publisher...">
 					<input type="submit" class="click" name="search" value="search"><br><br>
 				</div>
-			<table>
+			<table width= "1550px">
 				<center>
 				<tr bgcolor= #9bbad3>
-					<th width="9%">book_id</th>
-					<th width="9%">book_title</th>
-					<th width="9%">category_id</th>
-					<th width="9%">author</th>
-					<th width="9%">book_copies</th>
-					<th width="9%">book_pub</th>
-					<th width="9%">publisher_name</th>
-					<th width="10%">isbn</th>
-					<th width="9%">copyright_year</th>
-					<th width="9%">date_added</th>
-					<th width="9%">status</th>
+					<th>BOOK ID</th>
+					<th>BOOK TITLE</th>
+					<th>CATEGORY ID</th>
+					<th>AUTHOR</th>
+					<th>BOOK COPIES</th>
+					<th>BOOK PUBLICATION</th>
+					<th>PUBLISHER NAME</th>
+					<th>ISBN</th>
+					<th>COPYRIGHT YEAR</th>
+					<th>DATE ADDED</th>
+					<th>STATUS</th>
 				</tr>
 				</center>
 
@@ -109,7 +109,7 @@ function filterTable($query)
 				?>
 
 				<?php if(mysqli_num_rows($search_result)<=0)
-				echo "<center>No books found in the library </center><br><br>" ;
+				echo "<center>No books found in the library.</center><br><br>" ;
 				?>
 
 			</table>

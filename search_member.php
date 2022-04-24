@@ -70,17 +70,17 @@ function filterTable($query)
 					<input type="text" class="input" name="myInput" placeholder="Search by id, firstname, lastname, gender, type...">
 					<input type="submit" class="click" name="search" value="search"><br><br>
 				</div>
-			<table>
+			<table width="1550px">
 				<tr bgcolor="#9bbad3">
-					<th>member_id</th>
-					<th>firstname</th>
-					<th>lastname</th>
-					<th>gender</th>
-					<th>address</th>
-					<th>contact</th>
-					<th>type_id</th>
-					<th>year_level</th>
-					<th>status</th>
+					<th>MEMBER ID</th>
+					<th>FIRSTNAME</th>
+					<th>LASTNAME</th>
+					<th>GENDER</th>
+					<th>ADDRESS</th>
+					<th>CONTACT</th>
+					<th>TYPE ID</th>
+					<th>YEAR LEVEL</th>
+					<th>STATUS</th>
 				</tr>
 
 				<?php while($row = mysqli_fetch_array($search_result)):?>
@@ -101,7 +101,7 @@ function filterTable($query)
 				?>
 
 				<?php if(mysqli_num_rows($search_result)<=0)
-				echo "<center>No members found in the library </center><br><br>" ;
+				echo "<center>No members found in the library.</center><br><br>" ;
 				?>
 
 			</table>

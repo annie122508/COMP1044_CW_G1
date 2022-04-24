@@ -50,7 +50,7 @@ h1{
 }
 
 .wrapper .top_nav .right ul li:last-child{
-	background: #37a000;
+	background: #69aaea;
 	margin-right: 0;
 	border-radius: 2px;
 	text-transform: uppercase;
@@ -170,10 +170,6 @@ color: white;
 h2 a:hover {
 color: rgb(47, 177, 232);
 }
-
-a:active {
-color: yellow;
-} 
 
 h2{
 font-size: 22pt;

@@ -47,7 +47,7 @@
 }
 
 .wrapper .top_nav .right ul li:last-child{
-    background: #37a000;
+    background: #69aaea;
     margin-right: 0;
     border-radius: 2px;
     text-transform: uppercase;
@@ -104,4 +104,53 @@ table, tr, th, td{
     border: 2px solid #4682B4;
     padding: 5px 5px 5px 5px;
     font-family: 'poppins';
+    font-size: large;
+}
+
+#f1 {
+    background-color: #69aaea;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: rgb(8, 8, 147);
+    border-radius:20px;
+    -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -ms-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+#f1:hover{
+    background-color: #9bbad3;
+    text-decoration: underline;
+    
+}
+
+
+#f2 {
+    background-color: #69aaea;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: rgb(8, 8, 147);
+    border-radius:20px;
+    margin-top: 50px;
+    width: 200px;
+    -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -ms-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+#f2:hover{
+    background-color: #9bbad3;
+    text-decoration: underline;
 }

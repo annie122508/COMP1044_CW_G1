@@ -14,6 +14,12 @@ include 'conn/session.php'
 		function alert() {
 			return confirm("Are you sure to logout?");
 		}
+		function deletecheck() {
+			return confirm("Are you sure you want to delete?");
+		}
+		function editcheck() {
+			return confirm("Are you sure you want to edit?");
+		}
 	</script>
 <div class="wrapper">
 		<div class="multi_color_border"></div>
@@ -83,11 +89,11 @@ include 'conn/connect_db.php';
   <td><center><?php echo $status; ?></center></td>
   <td><center><form name ="button1" action="deletemember.php" method="POST">
 		  <input type="hidden" name="member_id" value="<?php echo $member_id; ?>"/>
-		  <input id="f1" type="submit" name="deletedata" value="Delete" onclick="return checkDelete();"/>
+		  <input id="f1" type="submit" name="deletedata" value="Delete" onclick="return deletecheck();"/>
  	</form>
 	 <td><center><form name ="button2" action="updatemember.php" method="POST">
 		  <input type="hidden" name="member_id" value="<?php echo $member_id; ?>"/>
-		  <input id="f1" type="submit" name="update" value="Edit" onclick="return checkDelete();"/>
+		  <input id="f1" type="submit" name="update" value="Edit" onclick="return editcheck();"/>
  	</form>
  </tr>
  <?php } ?>

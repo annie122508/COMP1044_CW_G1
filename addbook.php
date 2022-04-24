@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 	$result=mysqli_query($con,$sql);
 
 	if ($result) {
-		echo "New record created successfully";
+		echo "<script>window.alert('New record created successfully.');</script>";
 		} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 		}
@@ -108,7 +108,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 <script>
-		function alert() {
+		function bullshit() {
 			return confirm("Are you sure to logout?");
 		}
 	</script>
@@ -121,7 +121,7 @@ if(isset($_POST['submit'])){
 		
 			<div class="right">
 				<ul>
-				<li><a href="conn/destroy.php" onclick=" return alert()">LOGOUT</a></li>
+				<li><a href="conn/destroy.php" onclick=" return bullshit()">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -154,7 +154,6 @@ if(isset($_POST['submit'])){
 	<input type="text"  id="date_added" placeholder="date added "name="date_added">
 	<input  type="text" id="status" placeholder="status" name="status">
 	<input onclick="return validationForm()" id="button" type="submit" name="submit" value="Submit"></button>
-
 	</form>
 	<style>
 		

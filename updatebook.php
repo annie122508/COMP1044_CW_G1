@@ -3,13 +3,9 @@ session_start();
 ?>
 
 <?php
-	
-	//Connect to database.
 	include "conn/connect_db.php";
-	
-	//If user click edit button.
+
 	if(isset($_POST['update'])){
-		//Get data input.
 		$book_id=$_POST['book_id'];
 		$sql1 = "SELECT * FROM book 
 				JOIN category USING (category_id)
@@ -38,6 +34,9 @@ session_start();
 		<title>Update Book</title>
 		<link rel="stylesheet" type="text/css" href="css/updatebook.css">
 		<script>
+			function alert() {
+			return confirm("Are you sure to logout?");
+		}
 			function validateForm(){
 				var bookTitle = document.getElementById("bookTitle").value;
 				var category = document.getElementById("category").vaule;
@@ -73,7 +72,7 @@ session_start();
 				}else if (isbn == "") {
 					alert("Please key in isbn.");
 					return false;
-				}else if (copyrightYear == "") {
+				}else if (copyrig	htYear == "") {
 					alert("Please key in copyright year.");
 					return false;
 				}else if (copyrightYear < 1901 || copyrightYear > 2155) {
@@ -99,20 +98,22 @@ session_start();
 		
 			<div class="right">
 				<ul>
-					<li><a href="#">SIGN UP</a></li>
-					<li><a href="#">LOGIN</a></li>
+				<li><a href="conn/destroy.php" onclick=" return alert()">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>
 
+
 		<div class="bottom_nav">
 			<ul>
-				<li><a href="#">DASHBOARD</a></li>
-				<li><a href="#">CATEGORIES</a></li>
-				<li><a href="#">AUTHORS</a></li>
-				<li><a href="#">BOOKS</a></li>
-				<li><a href="#">ISSUE BOOKS</a></li>
-				<li><a href="#">CHANGE PASSWORD</a></li>
+				<li><a href="main_page.php">DASHBOARD</a></li>
+				<li><a href="search_member.php">Search member</a></li>
+				<li><a href="search_book.php">Search book</a></li>
+				<li><a href="addbook.php">Add book</a></li>
+				<li><a href="addmember.php">Add member</a></li>
+				<li><a href="books.php">Book List</a></li>
+				<li><a href="members.php">Member List</a></li>
+				<li><a href="borrowdetails.php">Borrow Details</a></li>
 			</ul>
 		</div>
 	</div>
@@ -121,15 +122,15 @@ session_start();
 		<form method="POST">
 		<table>
 			<tr>
-				<td>Book ID:</td> 
+				<td bgcolor= #9bbad3>Book ID:</td> 
 				<td><b><?php print $book_id;?></b><input name="bookid" type="hidden" size="50" value='<?php print $book_id;?>'></td>
 			</tr>
 			<tr>
-				<td>Book Title:</td> 
+				<td bgcolor= #9bbad3>Book Title:</td> 
 				<td><input id="bookTitle" name="booktitle" type="text" size="50" value='<?php print $book_title;?>'></td>
 			</tr>
 			<tr>
-				<td>Category:</td> 
+				<td bgcolor= #9bbad3>Category:</td> 
 				<td><select id="categoryType" name="categorytype" >
 					<option value="<?php print $category_id;?>"><?php print $classname;?></option>
 					<?php
@@ -142,39 +143,39 @@ session_start();
 					</td>
 			</tr>
 			<tr>
-				<td>Author:</td>
+				<td bgcolor= #9bbad3>Author:</td>
 				<td><input id="author" name="author" type="text" size="50" value='<?php print $author;?>'></td>
 			</tr>
-			<tr><td>Book Copies:</td> 
+			<tr><td bgcolor= #9bbad3>Book Copies:</td> 
 				<td><input id="bookCopies" name="book_copies" type="number" min="0" size="50" value='<?php print $book_copies;?>'></td>
 			</tr>
 			<tr>
-				<td>Book pub:</td>
+				<td bgcolor= #9bbad3>Book pub:</td>
 				<td><input id="bookPub" name="bookpub" size="50" type="text" value='<?php print $book_pub;?>'></td>
 			</tr>
 			<tr>
-				<td>Publisher name:</td>
+				<td bgcolor= #9bbad3>Publisher name:</td>
 				<td><input id="publisherName" name="publishername" size="50" type="text" value='<?php print $publisher_name;?>'></td>
 			</tr>
 			<tr>
-				<td>isbn:</td>
+				<td bgcolor= #9bbad3>isbn:</td>
 				<td><input id="isbn" name="isbn" size="50" type="text" value='<?php print $isbn;?>'></td>
 			</tr>
 			<tr>
-				<td>Copyright year:</td>
+				<td bgcolor= #9bbad3>Copyright year:</td>
 				<td><input id="copyrightYear" name="copyrightyear" size="50" type="number" min="1901" max="2155" step="1" value='<?php print $copyright_year;?>'></td>
 
 			</tr>
 			<tr>
-				<td>Date recieve:</td>
+				<td bgcolor= #9bbad3>Date recieve:</td>
 				<td><input name="daterecieve" type="hidden" value='<?php print $date_receive;?>'><?php print $date_receive;?></td>
 			</tr>
 			<tr>
-				<td>Date added:</td>
+				<td bgcolor= #9bbad3>Date added:</td>
 				<td><input name="dateadded" type="hidden" value='<?php print $date_added;?>'><?php print $date_added;?></td>
 			</tr>
 			<tr>
-				<td>Status:</td>
+				<td bgcolor= #9bbad3>Status:</td>
 					<td><select id="status" name="status" >
 					<option value='<?php print $status;?>'><?php print $status;?></option>
 					<option value="New">New</option>
@@ -184,12 +185,8 @@ session_start();
 					<option value="Old">Old</option>
 					</td>
 			</tr>
-
-			<tr>
-				<td><input name="edit" onclick= "return validateForm()" type="submit" name="Update" value="Update"></td>
-				<td><button formaction="books.php">Back</button></td>
-			</tr>
-		</table>	
+			</table>
+				<td><input id="f2" name="edit" onclick= "return validateForm()" type="submit" name="Update" value="Update"></td>
 		</form>
 	</body>
 </html>

@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
 	$result=mysqli_query($con,$sql);
 
 	if ($result) {
-		echo "New record created successfully";
+		echo "<script>window.alert('New record created successfully.');</script>";
 		} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 		}
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 <html>
 <head>
 <script>
-	function validationForm(){
+	function validationform(){
 			var Gender = document.getElementById("Gender").value;
 			var Firstname = document.getElementById("Firstname").value;
 			var Lastname = document.getElementById("Lastname").value;
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 	<script>
-		function alert() {
+		function bullshit() {
 			return confirm("Are you sure to logout?");
 		}
 	</script>
@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
 		
 			<div class="right">
 				<ul>
-				<li><a href="conn/destroy.php" onclick=" return alert()">LOGOUT</a></li>
+				<li><a href="conn/destroy.php" onclick=" return bullshit()">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -99,10 +99,12 @@ if(isset($_POST['submit'])){
 	<input type="text" id="Contact" name="contact" placeholder="Contact">
     <input type="text" id="Year_level" name="year_level" placeholder="Year Level">
     <input type="text" id="Status" name="status" placeholder="Status">
-    <input onclick="return validationForm()" id="button" type="submit" name="submit" value="Submit"></button>
-        </form>
+	<input onclick="return validationform()" id="button" type="submit" name="submit" value="Submit"></button>
+</form>
 </div>
+<div>
 
+</div>
 <script>
 
 </script>

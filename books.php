@@ -16,7 +16,10 @@ include 'conn/session.php'
 			return confirm("Are you sure to logout?");
 		}
 		function deletecheck() {
-			return confirm("Are you sure you want to delete?")
+			return confirm("Are you sure you want to delete?");
+		}
+		function editcheck() {
+			return confirm("Are you sure you want to edit?");
 		}
 	</script>
 <div class="wrapper">
@@ -100,7 +103,7 @@ include 'conn/connect_db.php';
  	</form>
 	 <td><center><form name ="button2" action="updatebook.php" method="POST">
 		  <input type="hidden" name="book_id" value="<?php echo $book_id; ?>"/>
-		  <input id="f1" type="submit" name="update" value="Edit"/>
+		  <input id="f1" type="submit" name="update" value="Edit" onclick="return editcheck();" />
  	</form>
  </tr>
  <?php } ?>

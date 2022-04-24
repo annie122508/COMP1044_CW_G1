@@ -33,7 +33,7 @@ include 'conn/session.php'
 
 		<div class="bottom_nav">
 			<ul>
-				<li><a href="main_page.html">DASHBOARD</a></li>
+				<li><a href="main_page.php">DASHBOARD</a></li>
 				<li><a href="search_member.php">Search member</a></li>
 				<li><a href="search.php">Search book</a></li>
 				<li><a href="addbook.php">Add book</a></li>
